@@ -66,16 +66,16 @@ const images = [
 
 const el = (tag, props) => Object.assign(document.createElement(tag), props);
 
-const createImages = ({ smallImage, largeImage, desc }) => {
+const createImages = ({ preview, original, description }) => {
   const ulList = el("ul", { className: "gallery" });
 
   const list = el("li", { className: "gallery-item" });
-  const aLink = el("a", { className: "gallery-link", href: smallImage });
+  const aLink = el("a", { className: "gallery-link", href: preview });
   const img = el("img", {
     className: "gallery-image",
-    src: smallImage,
-    dataSource: largeImage,
-    alt: desc,
+    src: preview,
+    dataSource: original,
+    alt: description,
   });
 
   ulList.append(list, aLink, img);
