@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./gallery.js"></script>
+
     <link
       rel="stylesheet"
       href="https://unpkg.com/basiclightbox/dist/basicLightbox.min.css"
     />
     <script src="https://unpkg.com/basiclightbox/dist/basicLightbox.min.js"></script>
+    <script src="./gallery.js"></script>
     <title>Homework 8</title>
   </head>
   <body class="col">
@@ -27,16 +28,5 @@
         </li>
       </ul>
     </main>
-    <script>
-      const instance = basicLightbox.create(
-        `
-	<h1>Not closable</h1>
-	<p>It's not possible to close this lightbox with a click.</p>
-`,
-        {
-          closable: false,
-        }
-      );
-    </script>
   </body>
 </html>
