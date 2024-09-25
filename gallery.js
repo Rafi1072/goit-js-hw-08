@@ -146,6 +146,6 @@ class Gallery {
 
 const gallery = new Gallery({
   images,
-  galleryRoot: document.querySelector("main#gallery"),
+  galleryRoot: document.querySelector("ul.gallery"),
   modalRoot: document.querySelector("template#modal"),
 });
