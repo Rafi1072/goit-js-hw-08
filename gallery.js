@@ -64,12 +64,17 @@ const images = [
   },
 ];
 
-const instance = basicLightbox.create(
-  `
-	<h1>Not closable</h1>
-	<p>It's not possible to close this lightbox with a click.</p>
-`,
-  {
-    closable: false,
-  }
-);
+//const instance = basicLightbox.create(
+//`
+//<h1>Not closable</h1>
+//<p>It's not possible to close this lightbox with a click.</p>
+//`,
+//{
+//closable: false,
+//}
+//);
+
+const instance = basicLightbox.create(`
+    <h1>Dynamic Content</h1>
+    <p>You can set the content of the lightbox with JS.</p>
+`);
