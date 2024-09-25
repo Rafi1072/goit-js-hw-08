@@ -1,0 +1,9 @@
+.gallery-image {
+  width: 360px;
+  height: 200px;
+  padding: 24px;
+}
+
+.gallery-item {
+  list-style-type: none;
+}
