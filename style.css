@@ -6,4 +6,7 @@
 
 .gallery-item {
   list-style-type: none;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
 }
