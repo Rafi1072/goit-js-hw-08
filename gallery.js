@@ -98,23 +98,23 @@ const renderImages = (images) => {
 
 document.body.append(renderImages(images));
 
-const imageClick = document.querySelector(".galleryImage");
-// imageClick.addEventListener("click", (event) => {
-//   event.preventDefault();
-//   console.log("To jest link:");
-// });
+const galleryImages = document.querySelectorAll(".gallery-image");
 
-const lightbox = basicLightbox.create();
-imageClick.addEventListener("click", lightbox.show);
+galleryImages.forEach((image) => {
+  image.addEventListener("click", (event) => {
+    event.preventDefault();
 
-// const unclosableInstance = basicLightbox.create(
-//   `
-//         <h1>Nie można zamknąć</h1>
-//         <p>Nie można zamknąć tego okna modalnego kliknięciem.</p>
-//     `,
-//   {
-//     closable: false,
-//   }
-// );
+    const largeImageURL = image.dataset.source;
 
-// unclosableInstance.show();
+    const lightboxInstance = basicLightbox.create(`
+      <img src="${largeImageURL}" alt="${image.alt}">
+    `);
+    lightboxInstance.show();
+    document.addEventListener("keydown", function onEscKey(event) {
+      if (event.key === "Escape" || event.keyCode === 27) {
+        lightboxInstance.close();
+        document.removeEventListener("keydown", onEscKey);
+      }
+    });
+  });
+});
