@@ -1,7 +1,6 @@
 .gallery-image {
   width: 360px;
   height: 200px;
-  padding: 12px;
   cursor: url(./cursor.png), pointer;
 }
 
@@ -16,6 +15,7 @@
   align-items: center;
   width: 1300px;
   padding: 0;
+  gap: 24px;
 }
 
 body {
