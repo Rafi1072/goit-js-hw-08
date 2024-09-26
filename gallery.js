@@ -98,4 +98,23 @@ const renderImages = (images) => {
 
 document.body.append(renderImages(images));
 
-const imageClick = document.querySelector("img.galleryImage");
+const imageClick = document.querySelector(".galleryImage");
+// imageClick.addEventListener("click", (event) => {
+//   event.preventDefault();
+//   console.log("To jest link:");
+// });
+
+const lightbox = basicLightbox.create();
+imageClick.addEventListener("click", lightbox.show);
+
+// const unclosableInstance = basicLightbox.create(
+//   `
+//         <h1>Nie można zamknąć</h1>
+//         <p>Nie można zamknąć tego okna modalnego kliknięciem.</p>
+//     `,
+//   {
+//     closable: false,
+//   }
+// );
+
+// unclosableInstance.show();
