@@ -97,3 +97,5 @@ const renderImages = (images) => {
 };
 
 document.body.append(renderImages(images));
+
+const imageClick = document.querySelector("img.galleryImage");

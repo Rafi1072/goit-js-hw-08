@@ -2,7 +2,7 @@
   width: 360px;
   height: 200px;
   padding: 12px;
-  cursor: pointer;
+  cursor: url(./cursor.png), pointer;
 }
 
 .gallery-item {
