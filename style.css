@@ -1,12 +1,27 @@
 .gallery-image {
   width: 360px;
   height: 200px;
-  padding: 24px;
+  padding: 12px;
+  cursor: pointer;
 }
 
 .gallery-item {
   list-style-type: none;
-  display: inline-block;
-  align-items: center;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  width: 1300px;
+  padding: 0;
+}
+
+body {
+  height: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
